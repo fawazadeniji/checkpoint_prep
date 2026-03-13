@@ -2,10 +2,18 @@ package main
 
 import (
 	"fmt"
-	"piscine"
 )
 
+func CheckNumber(s string) bool {
+	for _, c := range s {
+		if c < '0' || c > '9' {
+			return false
+		}
+	}
+	return true
+}
+
 func main() {
-	fmt.Println(piscine.CheckNumber("Hello"))
-	fmt.Println(piscine.CheckNumber("Hello1"))
+	fmt.Println(CheckNumber("Hello"))
+	fmt.Println(CheckNumber("Hello1"))
 }

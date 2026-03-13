@@ -2,12 +2,18 @@ package main
 
 import (
 	"fmt"
-	"piscine"
 )
 
+func PrintIfNot(s string) string {
+	if len(s) < 3 {
+		return "G\n"
+	}
+	return "Invalid Input\n"
+}
+
 func main() {
-	fmt.Print(piscine.PrintIfNot("abcdefz"))
-	fmt.Print(piscine.PrintIfNot("abc"))
-	fmt.Print(piscine.PrintIfNot(""))
-	fmt.Print(piscine.PrintIfNot("14"))
+	fmt.Print(PrintIfNot("abcdefz"))
+	fmt.Print(PrintIfNot("abc"))
+	fmt.Print(PrintIfNot(""))
+	fmt.Print(PrintIfNot("14"))
 }
